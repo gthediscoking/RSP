@@ -29,7 +29,6 @@ public class Judge {
 				System.out.println("¥n" + winner.getName() + "が勝ちました！¥n");
 				
 				// 勝ったプレイヤーへ結果を伝える
-				winner.notifyResult(true);
 				
 			}else{
 				// 引き分けの場合
