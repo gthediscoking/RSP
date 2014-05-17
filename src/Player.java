@@ -87,7 +87,7 @@ public class Player {
     * 
     * @return the name_（名前）
     */
-   public String getName_() {
+   public String getName() {
 	   return name_;
    }
 }
