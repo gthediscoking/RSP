@@ -26,14 +26,14 @@ public class Judge {
 			if (winner != null)
 			{
 				// 勝者を表示する
-				System.out.println("¥n" + winner.getName() + "が勝ちました！¥n");
+				System.out.println("\n" + winner.getName() + "が勝ちました！\n");
 				
 				// 勝ったプレイヤーへ結果を伝える
 				winner.notifyResult(true);
 				
 			}else{
 				// 引き分けの場合
-				System.out.println("¥n引き分けです！¥n");
+				System.out.println("\n引き分けです！\n");
 			}
 		}
 		// ジャンケンの終了を宣言する
@@ -47,9 +47,9 @@ public class Judge {
 
 		if (finalWinner != null)
 		{
-			System.out.println(finalWinner.getName() + "の勝ちです！¥n");
+			System.out.println(finalWinner.getName() + "の勝ちです！\n");
 		}else{
-			System.out.println("¥n引き分けです！¥n");
+			System.out.println("\n引き分けです！\n");
 		}		
 	}
 
@@ -75,7 +75,7 @@ public class Judge {
 		printHand(player1hand);
 		System.out.println(" vs. ");
 		printHand(player2hand);
-		System.out.println("¥n");
+		System.out.println("\n");
 		
 		// プレイヤー1が勝つ場合
 		if ((player1hand == Player.STONE    && player2hand == Player.SCISSORS)
