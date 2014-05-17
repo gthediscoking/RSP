@@ -12,9 +12,20 @@ public class Player {
   private String name_;
 
   /** プレイヤーの勝った回数 */
-  private int winCount_;
+  private int winCount_ = 0;
 
-  //プレイヤークラスの属性
+  //プレイヤークラスの操作
+  
+  /**
+   * プレイヤークラスのコンストラクタ。
+   * 
+   * @param name
+   */
+  public Player(String name)
+  {
+	  this.name_ = name;
+  }
+  
   /**
    * ジャンケンの手を出す。
    *
@@ -22,31 +33,31 @@ public class Player {
    */
   public int showHand()
    {
-    playerHand = 0;
+    int hand = 0;
 
 		// 0以上3未満の小数として乱数を得る
-		randomNum = Math.random() * 3;
+		double randomNum = Math.random() * 3;
 		if (randomNum < 1)
     {
 			// randomNum が 0.0以上1.0未満の場合、"グー"
-			playerHand = STONE;
+			hand = STONE;
 
 			// プレイヤーの手を表示する
 			// System.out.print("グー");
 		}else if (randomNum < 2) {
 			// randomNum が 1.0以上2.0未満の場合、"チョキ"
-			playerHand = SCISSORS;
+			hand = SCISSORS;
 
 			// プレイヤーの手を表示する
 			// System.out.print("チョキ");
 		} else if (randomNum < 3) {
 			// randomNum が 2.0以上3.0未満の場合、"パー"
-			playerHand = PAPER;
+			hand = PAPER;
 
 			// プレイヤーの手を表示する
 			// System.out.print("パー");
     }
-      return playerHand;
+      return hand;
    }
 
    /**
@@ -56,7 +67,7 @@ public class Player {
     */
   public void notifyResult(boolean result)
     {
-      if (result == true) {
+      if (true == result) {
         winCount_++;
       }
     }
@@ -70,3 +81,13 @@ public class Player {
    {
          return winCount_;
    }
+
+   /**
+    * 自分の名前を答える。
+    * 
+    * @return the name_（名前）
+    */
+   public String getName_() {
+	   return name_;
+   }
+}
