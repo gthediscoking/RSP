@@ -15,9 +15,21 @@ public class ObjectRSP {
 		
 		// プレイヤー1（村田さん）のインスタンス生成
 		Player murata = new Player("村田さん");
+		
+		// 村田さんに渡す戦略インスタンス生成
+		Tactics murataTactics = new RandomTactics();
+		
+		// 村田さんに戦略クラスを渡す
+		murata.setTactics(murataTactics);
 
 		// プレイヤー2（山田さん）のインスタンス生成
 		Player yamada = new Player("山田さん");
+		
+		// 山田さんに渡す戦略インスタンス生成
+		Tactics yamadaTactics = new RandomTactics();
+		
+		// 山田さんに戦略クラスを渡す
+		yamada.setTactics(yamadaTactics);		
 		
 		// 村田さんと山田さんでジャンケンを開始する。
 		saito.startJanken(murata, yamada);

@@ -45,34 +45,7 @@ public class Player {
    */
   public int showHand()
    {
-    int hand = tactics_.readTactics();  
-    
-    /*
-    int hand = 0;
-    
-		// 0以上3未満の小数として乱数を得る
-		double randomNum = Math.random() * 3;
-		if (randomNum < 1)
-    {
-			// randomNum が 0.0以上1.0未満の場合、"グー"
-			hand = STONE;
-
-			// プレイヤーの手を表示する
-			// System.out.print("グー");
-		}else if (randomNum < 2) {
-			// randomNum が 1.0以上2.0未満の場合、"チョキ"
-			hand = SCISSORS;
-
-			// プレイヤーの手を表示する
-			// System.out.print("チョキ");
-		} else if (randomNum < 3) {
-			// randomNum が 2.0以上3.0未満の場合、"パー"
-			hand = PAPER;
-
-			// プレイヤーの手を表示する
-			// System.out.print("パー");
-    }
-    */
+	  int hand = tactics_.readTactics();  
     
       return hand;
    }
