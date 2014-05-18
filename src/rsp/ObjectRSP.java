@@ -17,7 +17,7 @@ public class ObjectRSP {
 		Player murata = new Player("村田さん");
 		
 		// 村田さんに渡す戦略インスタンス生成
-		Tactics murataTactics = new RandomTactics();
+		Tactics murataTactics = new StoneOnlyTactics();
 		
 		// 村田さんに戦略クラスを渡す
 		murata.setTactics(murataTactics);
