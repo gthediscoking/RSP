@@ -15,8 +15,10 @@ public class Player {
   /** プレイヤーの勝った回数 */
   private int winCount_ = 0;
 
-  //プレイヤークラスの操作
+  /** 与えられた戦略 */
+  private Tactics tactics_;
   
+  //プレイヤークラスの操作
   /**
    * プレイヤークラスのコンストラクタ。
    * 
@@ -28,14 +30,26 @@ public class Player {
   }
   
   /**
+   * プレイヤーに戦略を渡す。
+   * 
+   * @param tactics 戦略
+   */
+  void setTactics(Tactics tactics) {
+	  tactics_ = tactics;
+  }
+
+/**
    * ジャンケンの手を出す。
    *
-   * @return ジャンケンの手
+   * @return hand ジャンケンの手
    */
   public int showHand()
    {
+    int hand = tactics_.readTactics();  
+    
+    /*
     int hand = 0;
-
+    
 		// 0以上3未満の小数として乱数を得る
 		double randomNum = Math.random() * 3;
 		if (randomNum < 1)
@@ -58,6 +72,8 @@ public class Player {
 			// プレイヤーの手を表示する
 			// System.out.print("パー");
     }
+    */
+    
       return hand;
    }
 
